@@ -1,0 +1,27 @@
+<span>
+         
+         <div class="move-title">{{movie.Title}} ({{movie.Year}})</div>
+         <div><strong>Starring:</strong> {{movie.details.Actors}}</div>
+         <div><strong>Rated:</strong> {{movie.details.Rated}}</div>
+         <div><strong>Runtime:</strong> {{movie.details.Runtime}}</div>
+         <div><strong>Genre:</strong> {{movie.details.Genre}}</div>
+         <div><strong>Director:</strong> {{movie.details.Director}}</div>
+         <div><strong>Writer:</strong> {{movie.details.Writer}}</div>
+         <div><strong>Language:</strong> {{movie.details.Language}}</div>
+         <div><strong>Studio:</strong> {{movie.details.Production}}</div>
+         
+       </span>
+       
+       <span>
+         
+         <div><strong>Plot: </strong>{{movie.details.Plot}}</div>
+         
+       </span>
+       
+       <div class="clear"></div>
+       
+       <div class="reviews">
+         
+         <em>IMDB Rating: {{movie.details.imdbRating}} | Rotten Tomatoes Meter: {{movie.details.tomatoMeter}} ({{movie.details.tomatoImage}}) | Metascore: {{movie.details.Metascore}}</em>
+         
+       </div>

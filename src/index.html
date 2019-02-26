@@ -1,14 +1,39 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>TodoApp</title>
-  <base href="/">
+<html>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <base href="/">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+  <script src="script.js"></script>
+  <script src="/app/app.js"></script>
+  <title>Movie Search | OMDb API</title>
+  
 </head>
-<body>
-  <app-root></app-root>
+
+<body ng-app="OMDbAPISearch">
+    <div class="container" ng-controller="searchMovies">
+
+        <h1>Search a Movie Title Below</h1>
+        <form>
+          <div class="search">
+           <input type="text" id="theSearch" ng-model="searchparam" placeholder="movie name" type="text" ngTrim="true" ngModel>          
+           <div class="clear"></div>
+          </div>
+          
+        </form>
+      
+        <div class="results">
+      
+          <div class="result" movie-srch-results ng-repeat="movie in movieResults"></div>
+      
+        </div>
+        <div class="noResults"></div>
+      
+      </div>
+  <app-root></app-root>  
 </body>
+
 </html>
